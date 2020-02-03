@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :students, only: [:index, :show, :update]
+  get '/students/activate_student/:id', to: 'students#activate_student', as: 'activate_student'
 end
