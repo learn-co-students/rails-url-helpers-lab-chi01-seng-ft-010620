@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Student.destroy_all
+
+30.times do
+
+  Student.create(first_name: Faker::Movies::LordOfTheRings.character, last_name: Faker::Creature::Horse.name)
+end
