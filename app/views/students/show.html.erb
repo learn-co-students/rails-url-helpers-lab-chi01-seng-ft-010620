@@ -1,13 +1,9 @@
 <h1><%= @student.first_name %></h1>
 <h1><%= @student.last_name %></h1>
-
-
-
-
-<% if @student.active == false %>
-<%= "This student is currently inactive." %>
-<% else %>
-<%= "This student is currently active." %>
-<% end %>
-
-<%= link_to "Activate", activate_student_path %>
+    <% if @student.active %>
+        <p>This student is currently active.</p>
+        <%= link_to "Mark as inactive", activate_student_path(@student)%>
+    <% else %>
+        <p>This student is currently inactive.</p>
+        <%= link_to "Mark as active", activate_student_path(@student)%>
+    <% end %>

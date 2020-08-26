@@ -1,11 +1,4 @@
-<h1>All Our Students</h1>
-<ul>
+<h1>Students</h1>
 <% @students.each do |student| %>
-  <li><div><%= link_to student.to_s, student_path(student) %></div></li>
+    <p><%= link_to student.to_s, student_path(student) %></p>
 <% end %>
-</ul>
-
-
-<h3>Choose from the following options</h3>
-<%= link_to "Add Student", new_student_path %>
-<%= link_to "Edit Student", edit_student_path %>
